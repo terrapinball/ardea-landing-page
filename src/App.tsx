@@ -147,9 +147,9 @@ function App() {
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                   </svg>
-                  <span>HIPAA & GDPR compliant</span>
+                  <span>Ephemeral by design</span>
                 </div>
               </div>
             </div>
@@ -302,9 +302,9 @@ function App() {
                 E2EE Secure Messaging
               </h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Move sensitive conversations out of Instagram DMs into a professional, encrypted space.
-                Discuss injuries, goals, and progress with complete privacy. HIPAA and GDPR compliant.
-                Your client data is exactly that—yours.
+                End-to-end encrypted with the Signal Protocol. Your clients' sensitive health disclosures
+                live only as long as they need to—leaving no digital trail for hackers, third parties,
+                or advertisers to exploit. We don't just "not sell" data—we built a system where there's nothing to sell.
               </p>
               <p className="text-sage-500 font-medium text-sm">
                 Privacy-First Communication
@@ -316,21 +316,21 @@ function App() {
           <div className="mt-16 flex flex-wrap items-center justify-center gap-8">
             <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full">
               <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <span className="text-slate-700 font-medium">HIPAA Compliant</span>
-            </div>
-            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full">
-              <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <span className="text-slate-700 font-medium">GDPR Compliant</span>
-            </div>
-            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full">
-              <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
               </svg>
-              <span className="text-slate-700 font-medium">End-to-End Encrypted</span>
+              <span className="text-slate-700 font-medium">Signal Protocol Encryption</span>
+            </div>
+            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full">
+              <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+              <span className="text-slate-700 font-medium">Ephemeral Storage</span>
+            </div>
+            <div className="flex items-center gap-3 glass-card px-6 py-3 rounded-full">
+              <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
+              </svg>
+              <span className="text-slate-700 font-medium">One-Tap Vault Export</span>
             </div>
           </div>
         </div>
@@ -369,13 +369,13 @@ function App() {
                   <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-slate-600">E2EE secure messaging</span>
+                  <span className="text-slate-600">E2EE ephemeral messaging</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-slate-600">HIPAA compliant client notes</span>
+                  <span className="text-slate-600">Vault exports for record keeping</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

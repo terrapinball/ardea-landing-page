@@ -23,9 +23,28 @@ The invisible infrastructure that secures the relationship between a service pro
 - "Move sensitive conversations out of Instagram DMs into a secure, professional environment."
 - "Your client data is exactly that—yours. Even we can't see your private messages."
 
+## Privacy Philosophy: "Eradication over Compliance"
+Instead of promising to *protect* data, Ardea minimizes the data that exists in the first place.
+
+| Aspect | Old Way (Standard Compliance) | The Ardea Pivot (Privacy by Design) |
+|--------|-------------------------------|-------------------------------------|
+| **Data Philosophy** | "We store your data securely." | "The most secure data is the data that doesn't exist." |
+| **Storage** | Permanent cloud databases (Vulnerable) | Ephemeral & Device-based (Digital footprint reduction) |
+| **Monetization** | "We promise not to sell your data." | "We built a system where there is nothing to sell." |
+| **Personalization** | Tracking user behavior | Privacy-Preserving Analytics (Personalized but anonymous) |
+
+### The "Vault" Export Feature
+Professionals still need records for insurance. Frame the export as an act of **Ownership**:
+- **Headline:** "Own Your Data. Literally."
+- **Pitch:** Most platforms hold your business records hostage on their servers. If they go down or get hacked, your history is gone or exposed. With Ardea, you are the sole curator of your professional legacy.
+- **How it works:**
+  - Ephemeral storage keeps your workspace clean and digital footprint small
+  - Monthly "Vault" exports package sessions, notes, and messages into an encrypted file
+  - Zero-knowledge: Ardea doesn't keep a copy—we can never be a point of failure
+  - "Ardea-Ready" files: Drop a Vault file back into the app to view old records instantly, beautifully formatted, completely offline
+
 ## Visual Language
 - **Core Aesthetic:** Neutral & Minimalist (Professional utility)
 - **Accents:** Sage Green (Growth/Peace) and Terracotta (Earth/Craft)
 - **Typography:** Modern Sans-Serif (Inter or Geist) for a "Tech-Forward" feel
 - **Personalization:** The UI acts as a "Gallery" that highlights the Studio's brand, not Ardea's
-- **Trust Signals:** Visual icons for HIPAA and GDPR compliance
