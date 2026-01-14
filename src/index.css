@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Warm Paper Background - replaces pure white */
+  --color-paper: #F9F8F4;
+  --color-paper-warm: #F5F3ED;
+
+  /* Sand accent - warm neutral for tags/badges */
+  --color-sand-50: #FAF8F5;
+  --color-sand-100: #F5F0E8;
+  --color-sand-200: #EBE3D6;
+  --color-sand-300: #DDD1BC;
+  --color-sand-400: #CABB9E;
+  --color-sand-500: #B8A482;
+
+  /* Brand Colors - Primary based on #7c9885 */
+  --color-sage-50: #f4f7f5;
+  --color-sage-100: #e5ebe7;
+  --color-sage-200: #ccd8d0;
+  --color-sage-300: #a8bfae;
+  --color-sage-400: #7c9885;
+  --color-sage-500: #5f7d69;
+  --color-sage-600: #4a6453;
+  --color-sage-700: #3d5144;
+  --color-sage-800: #344339;
+  --color-sage-900: #2c3830;
+  --color-sage-950: #181f1b;
+
+  --color-terracotta-50: #fdf6f3;
+  --color-terracotta-100: #fceae3;
+  --color-terracotta-200: #fad8cb;
+  --color-terracotta-300: #f5bda6;
+  --color-terracotta-400: #ee9879;
+  --color-terracotta-500: #e47a55;
+  --color-terracotta-600: #d05f3a;
+  --color-terracotta-700: #ae4c2e;
+  --color-terracotta-800: #90412b;
+  --color-terracotta-900: #773928;
+  --color-terracotta-950: #401b11;
+
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-paper);
+}
+
+/* Glassmorphism card style */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.03);
+}
+
+/* Soft shadow card style for non-glass cards */
+.soft-card {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.soft-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Fade-in up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Staggered animation delays */
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+
+/* Heron SVG draw animation */
+@keyframes drawHeron {
+  from {
+    stroke-dashoffset: 6000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fillHeron {
+  from {
+    fill-opacity: 0;
+  }
+  to {
+    fill-opacity: 1;
+  }
+}
+
+.heron-draw {
+  stroke-dasharray: 6000;
+  stroke-dashoffset: 6000;
+  animation: drawHeron 2s ease-out forwards;
+}
+
+.heron-fill {
+  fill-opacity: 0;
+  animation: fillHeron 0.8s ease-out 1.8s forwards;
+}
