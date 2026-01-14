@@ -149,7 +149,7 @@ function App() {
                   <svg className="w-5 h-5 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                   </svg>
-                  <span>Ephemeral by design</span>
+                  <span>You own your data</span>
                 </div>
               </div>
             </div>
@@ -282,9 +282,9 @@ function App() {
                 Retreat & Event Management
               </h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                Launch workshops and retreats without the spreadsheet chaos. Custom booking flows,
+                Launch workshops and retreats <span className="font-semibold text-slate-800">without the spreadsheet chaos</span>. Custom booking flows,
                 deposit handling, room selections, dietary intake forms, and attendee management—all
-                built in. Focus on the experience, not the logistics.
+                built in. <span className="font-semibold text-slate-800">Focus on the experience, not the logistics.</span>
               </p>
               <p className="text-sage-500 font-medium text-sm">
                 Retreats Made Simple
@@ -302,9 +302,9 @@ function App() {
                 E2EE Secure Messaging
               </h3>
               <p className="text-slate-600 leading-relaxed mb-4">
-                End-to-end encrypted with the Signal Protocol. Your clients' sensitive health disclosures
-                live only as long as they need to—leaving no digital trail for hackers, third parties,
-                or advertisers to exploit. We don't just "not sell" data—we built a system where there's nothing to sell.
+                End-to-end encrypted with the <span className="font-semibold text-slate-800">Signal Protocol</span>. Your clients' sensitive health disclosures
+                live only as long as they need to—leaving <span className="font-semibold text-slate-800">no digital trail</span> for hackers, third parties,
+                or advertisers to exploit. We don't just "not sell" data—we built a system where there's <span className="font-semibold text-slate-800">nothing to sell</span>.
               </p>
               <p className="text-sage-500 font-medium text-sm">
                 Privacy-First Communication
@@ -350,9 +350,9 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Tier 1: Solo Pro */}
+            {/* Tier 1: Independent */}
             <div className={`soft-card bg-paper rounded-2xl p-8 border border-sand-200 ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-1' : 'opacity-0'}`}>
-              <p className="text-sage-500 font-medium mb-2">Solo Pro</p>
+              <p className="text-sage-500 font-medium mb-2">The Independent</p>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">$19<span className="text-lg font-normal text-slate-500">/month</span></h3>
               <p className="text-sm text-sand-500 bg-sand-100 inline-block px-2 py-0.5 rounded font-medium mb-6">Founding Rate</p>
               <p className="text-slate-600 mb-6">
@@ -392,12 +392,12 @@ function App() {
               </button>
             </div>
 
-            {/* Tier 2: The Unified Studio */}
+            {/* Tier 2: The Cooperative */}
             <div className={`soft-card bg-sage-500 rounded-2xl p-8 text-white relative ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-2' : 'opacity-0'}`}>
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-terracotta-500 text-white text-sm font-medium px-4 py-1 rounded-full">
                 Most Popular
               </div>
-              <p className="text-sage-100 font-medium mb-2">The Unified Studio</p>
+              <p className="text-sage-100 font-medium mb-2">The Cooperative</p>
               <h3 className="text-2xl font-bold mb-2">$49<span className="text-lg font-normal text-sage-200">/month</span></h3>
               <p className="text-sm text-sand-200 bg-sage-600 inline-block px-2 py-0.5 rounded font-medium mb-6">Founding Rate</p>
               <p className="text-sage-100 mb-6">
@@ -443,9 +443,9 @@ function App() {
               </button>
             </div>
 
-            {/* Tier 3: The Chain */}
+            {/* Tier 3: The Unified Studio */}
             <div className={`soft-card bg-paper rounded-2xl p-8 border border-sand-200 ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-3' : 'opacity-0'}`}>
-              <p className="text-sage-500 font-medium mb-2">The Chain</p>
+              <p className="text-sage-500 font-medium mb-2">The Unified Studio</p>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Custom</h3>
               <p className="text-sm text-slate-500 font-medium mb-6">Contact for Quote</p>
               <p className="text-slate-600 mb-6">
@@ -506,28 +506,23 @@ function App() {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-slate-900">A Note from the Founder</h3>
-                <p className="text-slate-500">Why I'm building Ardea</p>
               </div>
             </div>
             <div className="space-y-4 text-slate-600 leading-relaxed">
               <p>
-                I've watched yoga teachers, massage therapists, and wellness studio owners pour their hearts
-                into supporting the physical and mental health of their communities—only to spend their
-                evenings drowning in admin work.
+                A close friend of mine is a yoga teacher, a healer, and a leader in her community. But behind the scenes, she's forced to be a "software integrator." She's constantly juggling different systems for her classes, massage appointments, and retreats.
               </p>
               <p>
-                The irony isn't lost on me. The people who teach us to breathe, to find balance, to be
-                present—they're stressed, overworked, and using a patchwork of apps that were never
-                designed for how they actually work.
+                <span className="font-semibold text-slate-800">It seems ironic.</span> The people who teach us how to breathe and find balance are tethered to a patchwork of clunky tools. Tools that weren't designed for the way people actually work—they were just the only options available.
               </p>
               <p>
-                Ardea exists because you deserve better. Not another app that adds to the chaos, but
-                one platform that finally brings it all together. One that treats your clients' privacy
-                with the same care you bring to every session. One that gives you those 5 hours back—so
-                you can do more of what you love.
+                I believe technology should work for you. It should be creative, intuitive, and—above all—simple.
               </p>
-              <p className="font-medium text-slate-800">
-                Thank you for being here at the beginning. I can't wait to build this with you.
+              <p>
+                I'm building Ardea to bridge that gap. By bringing your classes, 1-on-1s, and events into one unified space, we're doing more than just fixing a scheduling problem. We're protecting your time and your clients' privacy so you can get back to what actually matters: <span className="font-semibold text-slate-800">helping your community thrive</span>.
+              </p>
+              <p>
+                You've spent enough time being a spreadsheet wizard. It's time to get back to the studio.
               </p>
             </div>
           </div>
