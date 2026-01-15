@@ -563,7 +563,7 @@ function App() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="flex-1 px-6 py-4 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sage-400"
+                  className="flex-1 px-6 py-4 rounded-xl text-sage-100 placeholder-sage-100 border-2 border-sage-300 focus:outline-none focus:border-sage-100 focus:ring-2 focus:ring-sage-100"
                 />
                 <button
                   type="submit"
