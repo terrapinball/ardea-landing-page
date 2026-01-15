@@ -246,7 +246,7 @@ function App() {
               Everything in One Place. Finally.
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Ardea is the <span className="font-semibold text-slate-800">first unified platform</span> built for the unique workflow of wellness professionals.
+              Built for the way wellness<span className="font-semibold text-slate-800">actually works</span>
             </p>
           </div>
 
@@ -353,142 +353,52 @@ function App() {
             {/* Tier 1: Independent */}
             <div className={`soft-card bg-paper rounded-2xl p-8 border border-sand-200 ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-1' : 'opacity-0'}`}>
               <p className="text-sage-500 font-medium mb-2">The Independent</p>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">$19<span className="text-lg font-normal text-slate-500">/month</span></h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">$<span className="text-lg font-normal text-slate-500">/month</span></h3>
               <p className="text-sm text-sand-500 bg-sand-100 inline-block px-2 py-0.5 rounded font-medium mb-6">Founding Rate</p>
-              <p className="text-slate-600 mb-6">
-                For independent teachers, massage therapists, and solo practitioners.
+              <p className="text-slate-600 mb-8">
+                You + a partner
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Unlimited 1-on-1 appointments</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">E2EE ephemeral messaging</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Vault exports for record keeping</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Online booking page</span>
-                </li>
-              </ul>
-              <button
-                onClick={(e) => handleSubmit(e, 'solo')}
-                className="w-full bg-slate-200 hover:bg-slate-300 text-slate-800 py-3 rounded-xl font-semibold transition-colors"
+              <a
+                href="#waitlist"
+                className="block w-full bg-slate-200 hover:bg-slate-300 text-slate-800 py-3 rounded-xl font-semibold transition-colors text-center"
               >
-                Reserve My Founding Rate
-              </button>
+                Yes
+              </a>
             </div>
 
-            {/* Tier 2: The Cooperative */}
+            {/* Tier 2: The Unified Studio */}
             <div className={`soft-card bg-sage-500 rounded-2xl p-8 text-white relative ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-2' : 'opacity-0'}`}>
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-terracotta-500 text-white text-sm font-medium px-4 py-1 rounded-full">
                 Most Popular
               </div>
-              <p className="text-sage-100 font-medium mb-2">The Cooperative</p>
-              <h3 className="text-2xl font-bold mb-2">$49<span className="text-lg font-normal text-sage-200">/month</span></h3>
+              <p className="text-sage-100 font-medium mb-2">The Unified Studio</p>
+              <h3 className="text-2xl font-bold mb-2">$<span className="text-lg font-normal text-sage-200">/month</span></h3>
               <p className="text-sm text-sand-200 bg-sage-600 inline-block px-2 py-0.5 rounded font-medium mb-6">Founding Rate</p>
-              <p className="text-sage-100 mb-6">
-                For boutique studios with multiple teachers and diverse offerings.
+              <p className="text-sage-100 mb-8">
+                Up to 5 users
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sage-50">Everything in Solo Pro</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sage-50">Group class scheduling</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sage-50">Retreat & event management</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sage-50">Up to 9 team members</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sage-50">Team messaging & coordination</span>
-                </li>
-              </ul>
-              <button
-                onClick={(e) => handleSubmit(e, 'studio')}
-                className="w-full bg-white hover:bg-sage-50 text-sage-600 py-3 rounded-xl font-semibold transition-colors"
+              <a
+                href="#waitlist"
+                className="block w-full bg-white hover:bg-sage-50 text-sage-600 py-3 rounded-xl font-semibold transition-colors text-center"
               >
-                Reserve My Founding Rate
-              </button>
+                I'm interested
+              </a>
             </div>
 
-            {/* Tier 3: The Unified Studio */}
+            {/* Tier 3: The Cooperative */}
             <div className={`soft-card bg-paper rounded-2xl p-8 border border-sand-200 ${pricingSection.isInView ? 'animate-fade-in-up animate-delay-3' : 'opacity-0'}`}>
-              <p className="text-sage-500 font-medium mb-2">The Unified Studio</p>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Custom</h3>
-              <p className="text-sm text-slate-500 font-medium mb-6">Contact for Quote</p>
-              <p className="text-slate-600 mb-6">
-                For multi-location businesses ready to scale with enterprise features.
+              <p className="text-sage-500 font-medium mb-2">The Cooperative</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">$<span className="text-lg font-normal text-slate-500">/month</span></h3>
+              <p className="text-sm text-sand-500 bg-sand-100 inline-block px-2 py-0.5 rounded font-medium mb-6">Founding Rate</p>
+              <p className="text-slate-600 mb-8">
+                Your entire staff
               </p>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Everything in Unified Studio</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Unlimited locations</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Unlimited team members</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Dedicated onboarding</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-sage-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-slate-600">Priority support</span>
-                </li>
-              </ul>
-              <button
-                onClick={(e) => handleSubmit(e, 'enterprise')}
-                className="w-full bg-slate-200 hover:bg-slate-300 text-slate-800 py-3 rounded-xl font-semibold transition-colors"
+              <a
+                href="#waitlist"
+                className="block w-full bg-slate-200 hover:bg-slate-300 text-slate-800 py-3 rounded-xl font-semibold transition-colors text-center"
               >
-                Contact for Custom Quote
-              </button>
+                Sign me up!
+              </a>
             </div>
           </div>
         </div>
@@ -570,11 +480,11 @@ function App() {
                   disabled={isSubmitting}
                   className="bg-terracotta-500 hover:bg-terracotta-600 disabled:bg-terracotta-400 text-white px-8 py-4 rounded-xl font-semibold transition-colors whitespace-nowrap"
                 >
-                  {isSubmitting ? 'Joining...' : "I'm Interested"}
+                  {isSubmitting ? "Joining..." : "Email me"}
                 </button>
               </form>
               <p className="mt-4 text-sm text-sage-200">
-                No spam. Just updates on our launch and your exclusive founding member pricing.
+                No spam. Just updates on our launch and your founding member pricing.
               </p>
             </>
           )}
