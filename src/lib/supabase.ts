@@ -1,10 +1,23 @@
-import { createClient } from '@supabase/supabase-js'
-
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY
 
-if (!supabaseUrl || !supabaseAnonKey) {
-  throw new Error('Missing Supabase environment variables')
+if (!supabaseUrl) {
+  throw new Error('Missing VITE_SUPABASE_URL environment variable')
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+export async function joinWaitlist(email: string, tier?: string) {
+  const response = await fetch(`${supabaseUrl}/functions/v1/waitlist-signup`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ email, tier }),
+  })
+
+  const data = await response.json()
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Failed to join waitlist')
+  }
+
+  return data
+}

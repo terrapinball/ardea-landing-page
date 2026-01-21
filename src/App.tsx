@@ -929,17 +929,13 @@ function App() {
     setIsSubmitting(true)
 
     try {
-      const { supabase } = await import('./lib/supabase')
-      const { error } = await supabase
-        .from('waitlist')
-        .insert([{ email, tier: tier || selectedTier }])
-
-      if (error) throw error
-
+      const { joinWaitlist } = await import('./lib/supabase')
+      await joinWaitlist(email, tier || selectedTier || undefined)
       setIsSubmitted(true)
     } catch (err) {
       console.error('Waitlist signup error:', err)
-      alert('Something went wrong. Please try again.')
+      const message = err instanceof Error ? err.message : 'Something went wrong. Please try again.'
+      alert(message)
     } finally {
       setIsSubmitting(false)
     }
