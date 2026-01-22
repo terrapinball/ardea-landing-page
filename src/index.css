@@ -2,6 +2,7 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-helcim: 'Poppins', system-ui, sans-serif;
 
   /* Warm Paper Background - replaces pure white */
   --color-paper: #F9F8F4;
@@ -141,4 +142,13 @@ body {
 .heron-fill {
   fill-opacity: 0;
   animation: fillHeron 0.8s ease-out 1.8s forwards;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari, Opera */
 }
