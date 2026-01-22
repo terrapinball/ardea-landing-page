@@ -59,10 +59,10 @@ function MobileWelcomeMockup() {
       {/* Dynamic Island */}
       <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-10" style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.3) inset' }}></div>
 
-      {/* Screen */}
-      <div className="relative w-full h-full bg-white rounded-[1.9rem] overflow-hidden flex flex-col" style={{ boxShadow: '0 0 0 0.5px rgba(0,0,0,0.3)' }}>
+      {/* Screen - warm peachy background like reference */}
+      <div className="relative w-full h-full rounded-[1.9rem] overflow-hidden flex flex-col" style={{ background: '#FDF8F5', boxShadow: '0 0 0 0.5px rgba(0,0,0,0.3)' }}>
         {/* Status bar - space for dynamic island */}
-        <div className="flex justify-between items-center px-6 pt-3 pb-1 text-xs text-slate-400">
+        <div className="flex justify-between items-center px-6 pt-3 pb-1 text-xs" style={{ color: '#9B8B7D' }}>
           <span className="font-medium">9:41</span>
           <div className="flex items-center gap-1">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -76,81 +76,74 @@ function MobileWelcomeMockup() {
 
         {/* Content */}
         <div className="flex-1 px-5 py-2 overflow-hidden">
+          {/* Calendar Icon - coral/salmon like reference */}
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mt-6" style={{ background: '#F8B4A0' }}>
+            <svg className="w-6 h-6" fill="none" stroke="white" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+
           {/* Header */}
-          <div className="mb-5 mt-10">
-            <h2 className="text-xl font-semibold text-slate-500">Welcome! Let's get started</h2>
+          <div className="mb-2">
+            <h2 className="text-lg font-semibold" style={{ color: '#3D3530' }}>Welcome! Let's get started</h2>
           </div>
+          <p className="text-sm mb-6" style={{ color: '#9B8B7D' }}>
+            We'll have you ready to accept bookings in just a few minutes.
+          </p>
 
-          {/* Today card */}
-          <div className="bg-stone-100 rounded-2xl p-4 mb-5">
-            <p className="text-xs text-stone-500 mb-1">Today</p>
-            <p className="text-base font-semibold text-slate-800 mb-3">You have 2 sessions scheduled</p>
-            <button className="bg-white text-slate-700 text-sm font-medium px-4 py-2 rounded-full shadow-sm">
-              View Calendar
-            </button>
-          </div>
-
-          {/* Next Up section */}
-          <div>
-            <p className="text-xs text-stone-400 mb-3">Next Up</p>
-
-            {/* Session card 1 */}
-            <div className="bg-white rounded-2xl p-3 shadow-sm border border-slate-100 mb-3">
-              <div className="flex gap-3">
-                <div className="w-16 h-16 bg-stone-200 rounded-xl flex-shrink-0"></div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-slate-800">Morning Stretch</p>
-                  <p className="text-xs text-stone-400 mb-2">Gentle movement to start your day</p>
-                  <div className="flex items-center gap-3 text-[10px] text-stone-400">
-                    <span className="flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      8:30 AM
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      Virtual
-                    </span>
-                  </div>
-                </div>
-              </div>
+          {/* Business Option - Selected with coral border */}
+          <div className="rounded-2xl p-4 mb-3 relative" style={{ background: 'white', border: '2px solid #F28B6A' }}>
+            {/* Checkmark badge */}
+            <div className="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center" style={{ background: '#F28B6A' }}>
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
             </div>
-
-            {/* Session card 2 */}
-            <div className="bg-white rounded-2xl p-3 shadow-sm border border-slate-100">
-              <div className="flex gap-3">
-                <div className="w-16 h-16 bg-stone-300 rounded-xl flex-shrink-0"></div>
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-slate-800">Wellness Check-in</p>
-                  <p className="text-xs text-stone-400 mb-2">Monthly progress review</p>
-                  <div className="flex items-center gap-3 text-[10px] text-stone-400">
-                    <span className="flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                      2:00 PM
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                      Room 3B
-                    </span>
-                  </div>
-                </div>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#FCEEE8' }}>
+                <svg className="w-5 h-5" fill="none" stroke="#F28B6A" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-sm" style={{ color: '#3D3530' }}>Business</p>
+                <p className="text-xs" style={{ color: '#9B8B7D' }}>Manage appointments, classes, and events</p>
               </div>
             </div>
           </div>
+
+          {/* Individual Option - Unselected */}
+          <div className="rounded-2xl p-4 mb-6" style={{ background: 'white', border: '1px solid #E8E0DB' }}>
+            <div className="flex items-start gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#FAF6F3' }}>
+                <svg className="w-5 h-5" fill="none" stroke="#C4B5AB" strokeWidth={2} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <p className="font-semibold text-sm" style={{ color: '#3D3530' }}>Individual</p>
+                <p className="text-xs" style={{ color: '#9B8B7D' }}>Sign up for classes, join your favorite communities</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Spacer to push button down */}
+          <div className="flex-1"></div>
+        </div>
+
+        {/* Continue Button - Coral/salmon gradient */}
+        <div className="px-5 pb-6">
+          <button
+            className="w-full py-4 rounded-2xl text-white font-semibold text-base"
+            style={{ background: 'linear-gradient(135deg, #F8A090 0%, #F28B6A 100%)' }}
+          >
+            Continue
+          </button>
         </div>
 
         {/* Home indicator */}
         <div className="flex justify-center pb-2 pt-1">
-          <div className="w-28 h-1 bg-slate-200 rounded-full"></div>
+          <div className="w-28 h-1 rounded-full" style={{ background: '#D4C9C1' }}></div>
         </div>
       </div>
     </div>
