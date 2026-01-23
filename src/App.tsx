@@ -503,6 +503,7 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [heroLoaded, setHeroLoaded] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
 
   // Trigger hero fade-in after a short delay
   useEffect(() => {
@@ -510,6 +511,15 @@ function App() {
       setHeroLoaded(true)
     }, 300)
     return () => clearTimeout(timer)
+  }, [])
+
+  // Track scroll position for nav visibility
+  useEffect(() => {
+    const handleScroll = () => {
+      setHasScrolled(window.scrollY > 50)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   // Intersection observers for scroll animations
@@ -540,17 +550,17 @@ function App() {
   return (
     <div className="min-h-screen bg-paper text-slate-800">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200 transition-opacity duration-2700 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <nav className={`fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200 transition-all duration-300 ${hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <AnimatedHeron className="w-8 h-8 text-slate-900" />
             <span className="text-xl font-semibold text-slate-900">Ardea</span>
           </div>
           <a
-            href="#waitlist"
-            className="bg-terracotta-500 hover:bg-terracotta-600 text-white px-5 py-2 rounded-lg font-medium transition-colors"
+            href="#pricing"
+            className="text-slate-600 hover:text-slate-900 font-medium transition-colors"
           >
-            Join Waitlist
+            Pricing
           </a>
         </div>
       </nav>
@@ -576,23 +586,18 @@ function App() {
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 mt-30 lg:mt-0">
                 Ardea: Community
               </h1>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-300 max-w-xl mx-auto lg:mx-0 mb-10">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-300 max-w-xl mx-auto lg:mx-0 mb-6">
                 The quiet pulse of your studio.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <a
-                  href="#waitlist"
-                  className="inline-block bg-sage-500 hover:bg-sage-600 text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-sage-500/25"
-                >
-                  Join the Waitlist
-                </a>
-                <a
-                  href="#pricing"
-                  className="inline-block bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors border border-white/30"
-                >
-                  See Pricing
-                </a>
-              </div>
+              <p className="text-lg text-stone-400 max-w-lg mx-auto lg:mx-0 mb-10">
+                Simple booking, encrypted messaging, and transparent fees. Built for the modern yoga community.
+              </p>
+              <a
+                href="#waitlist"
+                className="inline-block bg-sage-500 hover:bg-sage-600 text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-sage-500/25"
+              >
+                Join the Waitlist
+              </a>
             </div>
 
             {/* Class Card Mockup */}
