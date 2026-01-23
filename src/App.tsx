@@ -43,113 +43,6 @@ function AnimatedHeron({ className = '', animate = false }: { className?: string
   )
 }
 
-// Mobile App Welcome Screen Mockup - matches welcome-screen-neutral.png reference
-function MobileWelcomeMockup() {
-  return (
-    <div
-      className="relative mx-auto w-[300px] h-[620px] rounded-[2.2rem] p-[5px]"
-      style={{
-        background: 'linear-gradient(165deg, #334155 0%, #1e293b 40%, #0f172a 100%)',
-        boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05) inset'
-      }}
-    >
-      {/* Subtle highlight edge for depth */}
-      <div className="absolute inset-0 rounded-[2.2rem] pointer-events-none" style={{ background: 'linear-gradient(165deg, rgba(255,255,255,0.06) 0%, transparent 25%, transparent 100%)' }}></div>
-
-      {/* Dynamic Island */}
-      <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-10" style={{ boxShadow: '0 2px 4px rgba(0,0,0,0.3) inset' }}></div>
-
-      {/* Screen - warm peachy background like reference */}
-      <div className="relative w-full h-full rounded-[1.9rem] overflow-hidden flex flex-col" style={{ background: '#FDF8F5', boxShadow: '0 0 0 0.5px rgba(0,0,0,0.3)' }}>
-        {/* Status bar - space for dynamic island */}
-        <div className="flex justify-between items-center px-6 pt-3 pb-1 text-xs" style={{ color: '#9B8B7D' }}>
-          <span className="font-medium">9:41</span>
-          <div className="flex items-center gap-1">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/>
-            </svg>
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M15.67 4H14V2h-4v2H8.33C7.6 4 7 4.6 7 5.33v15.33C7 21.4 7.6 22 8.33 22h7.33c.74 0 1.34-.6 1.34-1.33V5.33C17 4.6 16.4 4 15.67 4z"/>
-            </svg>
-          </div>
-        </div>
-
-        {/* Content */}
-        <div className="flex-1 px-5 py-2 overflow-hidden">
-          {/* Calendar Icon - coral/salmon like reference */}
-          <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 mt-6" style={{ background: '#F8B4A0' }}>
-            <svg className="w-6 h-6" fill="none" stroke="white" strokeWidth={2} viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-
-          {/* Header */}
-          <div className="mb-2">
-            <h2 className="text-lg font-semibold" style={{ color: '#3D3530' }}>Welcome! Let's get started</h2>
-          </div>
-          <p className="text-sm mb-6" style={{ color: '#9B8B7D' }}>
-            We'll have you ready to accept bookings in just a few minutes.
-          </p>
-
-          {/* Business Option - Selected with coral border */}
-          <div className="rounded-2xl p-4 mb-3 relative" style={{ background: 'white', border: '2px solid #F28B6A' }}>
-            {/* Checkmark badge */}
-            <div className="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center" style={{ background: '#F28B6A' }}>
-              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#FCEEE8' }}>
-                <svg className="w-5 h-5" fill="none" stroke="#F28B6A" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div className="flex-1">
-                <p className="font-semibold text-sm" style={{ color: '#3D3530' }}>Business</p>
-                <p className="text-xs" style={{ color: '#9B8B7D' }}>Manage appointments, classes, and events</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Individual Option - Unselected */}
-          <div className="rounded-2xl p-4 mb-6" style={{ background: 'white', border: '1px solid #E8E0DB' }}>
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ background: '#FAF6F3' }}>
-                <svg className="w-5 h-5" fill="none" stroke="#C4B5AB" strokeWidth={2} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-              </div>
-              <div className="flex-1">
-                <p className="font-semibold text-sm" style={{ color: '#3D3530' }}>Individual</p>
-                <p className="text-xs" style={{ color: '#9B8B7D' }}>Sign up for classes, join your favorite communities</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Spacer to push button down */}
-          <div className="flex-1"></div>
-        </div>
-
-        {/* Continue Button - Coral/salmon gradient */}
-        <div className="px-5 pb-6">
-          <button
-            className="w-full py-4 rounded-2xl text-white font-semibold text-base"
-            style={{ background: 'linear-gradient(135deg, #F8A090 0%, #F28B6A 100%)' }}
-          >
-            Continue
-          </button>
-        </div>
-
-        {/* Home indicator */}
-        <div className="flex justify-center pb-2 pt-1">
-          <div className="w-28 h-1 rounded-full" style={{ background: '#D4C9C1' }}></div>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 // Calendar Mockup Component - matches unified-calendar.png reference
 function CalendarMockup() {
   const weekDays = [
@@ -370,6 +263,72 @@ function CalendarMockup() {
   )
 }
 
+// Class Card Mockup Component - matches class-card-sample.png reference
+function ClassCardMockup() {
+  return (
+    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden w-96">
+      {/* Hero Image */}
+      <div className="relative h-40">
+        <img
+          src="https://images.unsplash.com/photo-1631954401711-0b11d59ba205?w=400&q=80"
+          alt="Person overlooking mountain valley"
+          className="w-full h-full object-cover"
+        />
+        {/* Price Badge */}
+        <div className="absolute top-3 right-3 bg-white rounded-full px-3 py-1 shadow-md">
+          <span className="text-sage-600 font-semibold text-sm">$22</span>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div className="p-4 space-y-3">
+        {/* Title */}
+        <div>
+          <h4 className="text-lg font-semibold text-slate-800">Hatha Basics</h4>
+          <p className="text-sm text-slate-500 leading-relaxed">
+            Perfect for beginners, focusing on fundamental poses and breathing techniques.
+          </p>
+        </div>
+
+        {/* Details */}
+        <div className="space-y-2 text-sm text-slate-600">
+          {/* Time */}
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Thursday, 9:00 AM</span>
+            <span className="text-slate-400">•</span>
+            <span>60 min</span>
+          </div>
+
+          {/* Location */}
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-sage-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span className="bg-sage-100 text-sage-700 px-2 py-0.5 rounded-md text-xs font-medium">The Conservatory</span>
+          </div>
+
+          {/* Spots */}
+          <div className="flex items-center gap-2">
+            <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span>15/20 spots left</span>
+          </div>
+        </div>
+
+        {/* Book Button */}
+        <button className="w-full bg-sage-500 hover:bg-sage-600 text-white py-3 rounded-xl font-semibold transition-colors mt-2">
+          Book Now
+        </button>
+      </div>
+    </div>
+  )
+}
+
 // Retreat Management Mockup Component
 function RetreatMockup() {
   return (
@@ -543,6 +502,15 @@ function App() {
   const [selectedTier] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [heroLoaded, setHeroLoaded] = useState(false)
+
+  // Trigger hero fade-in after a short delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHeroLoaded(true)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [])
 
   // Intersection observers for scroll animations
   const heroSection = useInView(0.3)
@@ -572,7 +540,7 @@ function App() {
   return (
     <div className="min-h-screen bg-paper text-slate-800">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200">
+      <nav className={`fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200 transition-opacity duration-2700 ${heroLoaded ? 'opacity-100' : 'opacity-0'}`}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <AnimatedHeron className="w-8 h-8 text-slate-900" />
@@ -601,61 +569,42 @@ function App() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 pt-20">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        <div className={`relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-16 pt-20 transition-all duration-3000 ${heroLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             {/* Text content */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6 mt-30 lg:mt-0">
-                Less Admin. More Presence.
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 mt-30 lg:mt-0">
+                Ardea: Community
               </h1>
-              <p className="text-lg md:text-xl text-white/90 max-w-xl mx-auto lg:mx-0 mb-8">
-                From group classes to private retreats—Ardea unites your community with simplicity and security.
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-300 max-w-xl mx-auto lg:mx-0 mb-10">
+                The quiet pulse of your studio.
               </p>
-              <div className="mb-8">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <a
                   href="#waitlist"
                   className="inline-block bg-sage-500 hover:bg-sage-600 text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-sage-500/25"
                 >
                   Join the Waitlist
                 </a>
-              </div>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-white/80">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-sage-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                  <span>End-to-end encrypted</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-sage-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                  <span>One unified calendar</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-sage-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <span>You own your data</span>
-                </div>
+                <a
+                  href="#pricing"
+                  className="inline-block bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors border border-white/30"
+                >
+                  See Pricing
+                </a>
               </div>
             </div>
 
-            {/* Mobile mockup - desktop */}
-            <div className="flex-shrink-0 hidden lg:block">
-              <MobileWelcomeMockup />
+            {/* Class Card Mockup */}
+            <div className="hidden lg:block flex-shrink-0">
+              <ClassCardMockup />
             </div>
-          </div>
-
-          {/* Mobile mockup - mobile only */}
-          <div className="lg:hidden pt-8 pb-12 flex justify-center">
-            <MobileWelcomeMockup />
           </div>
         </div>
       </section>
 
       {/* Pain Points Section */}
-      <section ref={painPointsSection.ref} className="py-20 px-6 bg-paper-warm">
+      <section id="problem" ref={painPointsSection.ref} className="py-20 px-6 bg-paper-warm">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
