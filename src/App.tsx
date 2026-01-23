@@ -266,7 +266,7 @@ function CalendarMockup() {
 // Class Card Mockup Component - matches class-card-sample.png reference
 function ClassCardMockup() {
   return (
-    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden w-96">
+    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden w-full sm:w-96">
       {/* Hero Image */}
       <div className="relative h-40">
         <img
@@ -284,9 +284,9 @@ function ClassCardMockup() {
       <div className="p-4 space-y-3">
         {/* Title */}
         <div>
-          <h4 className="text-lg font-semibold text-slate-800">Hatha Basics</h4>
+          <h4 className="text-lg font-semibold text-slate-800">Vinyasa</h4>
           <p className="text-sm text-slate-500 leading-relaxed">
-            Perfect for beginners, focusing on fundamental poses and breathing techniques.
+            All levels
           </p>
         </div>
 
@@ -316,7 +316,7 @@ function ClassCardMockup() {
             <svg className="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
-            <span>15/20 spots left</span>
+            <span>3/20 spots left</span>
           </div>
         </div>
 
@@ -516,7 +516,7 @@ function App() {
   // Track scroll position for nav visibility
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 50)
+      setHasScrolled(window.scrollY > 200)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -524,7 +524,6 @@ function App() {
 
   // Intersection observers for scroll animations
   const heroSection = useInView(0.3)
-  const painPointsSection = useInView(0.1)
   const featuresSection = useInView(0.1)
   const pricingSection = useInView(0.1)
 
@@ -550,7 +549,10 @@ function App() {
   return (
     <div className="min-h-screen bg-paper text-slate-800">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200 transition-all duration-300 ${hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}>
+      <nav
+        className={`fixed top-0 left-0 right-0 bg-paper/80 backdrop-blur-md z-50 border-b border-sand-200 ${hasScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'}`}
+        style={{ transition: 'all 1800ms cubic-bezier(0.4, 0, 0.2, 1)' }}
+      >
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <AnimatedHeron className="w-8 h-8 text-slate-900" />
@@ -574,8 +576,8 @@ function App() {
             alt="Mystic forest with fog"
             className="w-full h-full object-cover"
           />
-          {/* Gradient overlay for text readability - darker at top/center where text sits */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/30"></div>
+          {/* Gradient overlay for text readability - darker behind text block */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/20"></div>
         </div>
 
         {/* Content */}
@@ -583,98 +585,30 @@ function App() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
             {/* Text content */}
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4 mt-30 lg:mt-0">
-                Ardea: Community
+              {/* Header: Added tracking-tight for a more sophisticated look */}
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight mb-4 mt-30 lg:mt-0">
+                Ardea
               </h1>
-              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-stone-300 max-w-xl mx-auto lg:mx-0 mb-6">
+
+              {/* Subheader: Switched to font-light for that "Quiet" aesthetic */}
+              <p className="text-2xl md:text-3xl lg:text-4xl font-light text-stone-200 max-w-xl mx-auto lg:mx-0 mb-8">
                 The quiet pulse of your studio.
               </p>
-              <p className="text-lg text-stone-400 max-w-lg mx-auto lg:mx-0 mb-10">
-                Simple booking, encrypted messaging, and transparent fees. Built for the modern yoga community.
+
+              {/* Bridge Text: Increased brightness and slightly more line height */}
+              <p className="text-lg md:text-xl text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10">
+                Simple booking, encrypted messaging, transparent fees. <br className="hidden md:block" />
+                Built for the modern yoga community.
               </p>
-              <a
-                href="#waitlist"
-                className="inline-block bg-sage-500 hover:bg-sage-600 text-white text-lg px-8 py-4 rounded-xl font-semibold transition-colors shadow-lg shadow-sage-500/25"
-              >
-                Join the Waitlist
-              </a>
-            </div>
 
-            {/* Class Card Mockup */}
-            <div className="hidden lg:block flex-shrink-0">
-              <ClassCardMockup />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pain Points Section */}
-      <section id="problem" ref={painPointsSection.ref} className="py-20 px-6 bg-paper-warm">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              The reality most studio owners face
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              You got into wellness to <span className="font-semibold text-slate-800">help people heal</span>—not to become a <span className="font-semibold text-slate-800">spreadsheet wizard</span>.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className={`glass-card rounded-2xl p-8 text-center md:text-left ${painPointsSection.isInView ? 'animate-fade-in-up animate-delay-1' : 'opacity-0'}`}>
-              <div className="w-12 h-12 bg-terracotta-100 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+              <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                <a
+                  href="#waitlist"
+                  className="inline-block bg-sage-500 hover:bg-sage-600 text-white text-lg px-10 py-4 rounded-full font-medium transition-all duration-300 hover:scale-105 shadow-xl shadow-sage-900/20"
+                >
+                  Join the Waitlist
+                </a>
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                The 'Patchwork' Tax
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Mindbody for classes. Google Calendar for appointments. A spreadsheet for retreats. When your business is <span className="font-semibold text-slate-800">scattered across the universe</span>, double-booking isn't a risk—it's an <span className="font-semibold text-slate-800">inevitability</span>.
-              </p>
-            </div>
-
-            <div className={`glass-card rounded-2xl p-8 text-center md:text-left ${painPointsSection.isInView ? 'animate-fade-in-up animate-delay-2' : 'opacity-0'}`}>
-              <div className="w-12 h-12 bg-terracotta-100 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Sensitive Data in Unsafe Places
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                A student texts you about a back injury; another DMs on Instagram about anxiety medication. These are <span className="font-semibold text-slate-800">private health details</span>—not social media content. Ardea keeps your <span className="font-semibold text-slate-800">professional boundaries</span>—and your clients' privacy—intact.
-              </p>
-            </div>
-
-            <div className={`glass-card rounded-2xl p-8 text-center md:text-left ${painPointsSection.isInView ? 'animate-fade-in-up animate-delay-3' : 'opacity-0'}`}>
-              <div className="w-12 h-12 bg-terracotta-100 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                Death by a Thousand Admin Tasks
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                You're spending hours a week <span className="font-semibold text-slate-800">hunting for waivers</span> and manually <span className="font-semibold text-slate-800">reconciling deposits</span>. That's time you could spend doing <span className="font-semibold text-slate-800">what you really want to do</span>.
-              </p>
-            </div>
-
-            <div className={`glass-card rounded-2xl p-8 text-center md:text-left ${painPointsSection.isInView ? 'animate-fade-in-up animate-delay-4' : 'opacity-0'}`}>
-              <div className="w-12 h-12 bg-terracotta-100 rounded-xl flex items-center justify-center mb-6 mx-auto md:mx-0">
-                <svg className="w-6 h-6 text-terracotta-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-3">
-                The Retreat Planning Chaos
-              </h3>
-              <p className="text-slate-600 leading-relaxed">
-                Most software wasn't built for <span className="font-semibold text-slate-800">room selections</span> or <span className="font-semibold text-slate-800">dietary forms</span>. You're left manually chasing attendees and managing complex deposits. Ardea treats retreats like the <span className="font-semibold text-slate-800">core business</span> they are, not an afterthought.
-              </p>
             </div>
           </div>
         </div>
@@ -683,14 +617,30 @@ function App() {
       {/* Features Section */}
       <section ref={featuresSection.ref} className="py-20 px-6 bg-paper">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-sage-500 font-medium mb-3">The Solution</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Everything in One Place.
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Built for the way wellness <span className="font-semibold text-slate-800">actually works</span>
-            </p>
+          {/* Header with Class Card */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-16">
+            {/* Title and subtitle */}
+            <div className="text-center lg:text-left lg:max-w-md">
+              <p className="text-sage-500 font-medium mb-3">The Solution</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                Everything in One Place.
+              </h2>
+              <p className="text-xl text-slate-600">
+                Built for the way wellness <span className="font-semibold text-slate-800">actually works</span>
+              </p>
+            </div>
+
+            {/* Class Card - Desktop: right side */}
+            <div className="hidden lg:block flex-shrink-0 animate-float">
+              <ClassCardMockup />
+            </div>
+          </div>
+
+          {/* Class Card - Mobile: below header */}
+          <div className="lg:hidden flex justify-center mb-16 px-4">
+            <div className="w-full max-w-[320px] sm:max-w-none sm:w-auto">
+              <ClassCardMockup />
+            </div>
           </div>
 
           {/* Feature 1: Master Calendar */}
