@@ -4,13 +4,13 @@ if (!supabaseUrl) {
   throw new Error('Missing VITE_SUPABASE_URL environment variable')
 }
 
-export async function joinWaitlist(email: string, tier?: string) {
+export async function joinWaitlist(email: string, tier?: string, features?: string[]) {
   const response = await fetch(`${supabaseUrl}/functions/v1/waitlist-signup`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ email, tier }),
+    body: JSON.stringify({ email, tier, features }),
   })
 
   const data = await response.json()

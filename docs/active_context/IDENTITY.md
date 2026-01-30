@@ -1,10 +1,10 @@
 # Brand Identity: Ardea
 
-**Tagline:** "From group classes to private retreats—all in one place."
+**Tagline:** "Simple booking, encrypted messaging, transparent fees. Built for the modern yoga community."
 
 ## Target Market
-- **Primary:** Sole proprietors and small businesses needing booking + customer management
-- **Initial Focus:** Yoga studios
+- **Primary:** Yoga teachers and wellness professionals needing unified booking + customer management
+- **Initial Focus:** Yoga studios and independent instructors
 - **Use Cases:** Classes, appointments, events, retreats
 
 ## Positioning
@@ -16,6 +16,9 @@ The invisible infrastructure that secures the relationship between a service pro
 2. **The Retreat Logistics Gap:** Most booking software isn't built for events requiring deposits, room selections, or intake forms.
 3. **The Privacy Paradox:** Wellness professionals deal with sensitive client data (injuries, mental health notes, trauma-informed care) but rely on unsecure SMS or WhatsApp.
 4. **Admin Burnout:** Scheduling privates via messy text threads leads to missed appointments and lost revenue.
+5. **Sub-Management Chaos:** Teachers need subs, owners need to approve them—currently done via group texts and spreadsheets. A one-click request/approval system wins the "Operations" battle.
+6. **Payroll Nightmare:** Yoga payroll is complex (base pay + headcounts + tier bonuses). Automatic calculation with Quickbooks/Gusto export creates stickiness owners won't leave.
+7. **The "Migration" Dread:** The biggest barrier to switching from Walla/Mindbody is data migration fear. A "White Glove Migration" service (we move students and credit cards for them) eliminates the barrier to entry.
 
 ## Killer Feature
 **E2EE Secure Messaging** for direct messages and group chats (classes/events). Framed as professionalism, not just encryption:

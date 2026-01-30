@@ -4,7 +4,7 @@
 **Goal:** Gauge interest in the app idea via a landing page with waitlist signup.
 
 - [x] Naming & Branding (Ardea)
-- [ ] Landing Page build
+- [x] Landing Page build
 - [ ] Landing Page deployment
 - [ ] Waitlist email collection active
 
