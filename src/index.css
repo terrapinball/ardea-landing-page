@@ -166,3 +166,8 @@ body {
 .animate-float {
   animation: float 8s ease-in-out infinite;
 }
+
+/* Text shadow for readability over images */
+.text-shadow-glow {
+  text-shadow: 0 0 10px rgba(0,0,0,1), 0 0 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6);
+}

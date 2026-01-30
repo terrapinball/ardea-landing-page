@@ -1,10 +1,10 @@
 # Brand Identity: Ardea
 
-**Tagline:** "From group classes to private retreats—all in one place."
+**Tagline:** "Simple booking, encrypted messaging, transparent fees. Built for the modern yoga community."
 
 ## Target Market
-- **Primary:** Sole proprietors and small businesses needing booking + customer management
-- **Initial Focus:** Yoga studios
+- **Primary:** Yoga teachers and wellness professionals needing unified booking + customer management
+- **Initial Focus:** Yoga studios and independent instructors
 - **Use Cases:** Classes, appointments, events, retreats
 
 ## Positioning

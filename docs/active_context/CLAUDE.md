@@ -21,9 +21,9 @@
 ## Landing Page Blueprint
 
 ### Hero Section
-- **Headline:** "One Platform for Your Classes, Privates, and Retreats."
-- **Sub-headline:** "Stop juggling three different apps. Manage your entire studio—from high-energy group classes to intimate 1-on-1 sessions—on a platform built for privacy and peace of mind."
-- **CTA:** [Join the Waitlist] or [See How It Works]
+- **Headline:** "Ardea"
+- **Sub-headline:** "Simple booking, encrypted messaging, transparent fees. Built for the modern yoga community."
+- **CTA:** [Join the Waitlist]
 
 ### Feature Sections
 Present features as benefits, not specs. Show clean app UI examples for each.
@@ -48,12 +48,12 @@ Frame privacy as **data eradication**, not compliance checkboxes. This is NOT th
 **Do NOT include:** HIPAA/GDPR compliance badges or explicit compliance claims.
 
 ### Pricing Section
-Use a pricing table to test which tier resonates. Instead of "Buy Now," use **"Reserve My Founding Rate"** buttons that capture email—this reveals which price point users find attractive.
+Use a pricing table to test which tier resonates. Simple CTAs link to the waitlist form.
 
-| Tier | Price | Target | Includes |
-|------|-------|--------|----------|
-| **Solo Professional** | $19/mo | Independent teachers, massage therapists | 1-on-1 appointments, E2EE ephemeral messaging, Vault exports |
-| **Unified Studio** | $49/mo (Founding Rate) | Small studios with 2–9 instructors | Class schedules + Private appointments + Retreat management + Team messaging |
-| **Growing Studio** | $99/mo (Founding Rate) | Studios with 10+ instructors | Everything in Unified Studio, scaled for larger teams |
+| Tier | Price | Target |
+|------|-------|--------|
+| **The Independent** | $49/mo (Founding Rate) | You + a partner |
+| **The Unified Studio** | $79/mo (Founding Rate) | Up to 5 users |
+| **The Cooperative** | $149/mo (Founding Rate) | Your entire staff |
 
-**Hook:** "Lock in Founding Member pricing for life."
+**Hook:** "Lock in your founding rate for life. Join now and never pay more as we grow."
